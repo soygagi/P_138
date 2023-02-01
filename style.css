@@ -1,4 +1,29 @@
-body
-{
-
+.heading{
+    width: 100%;
+    text-align: left;
+}
+.heading h3{
+    display: inline;
+}
+.heading button{
+    float: right;
+    border: 1px solid rgb(198, 115, 115)smoke
+}
+.big_image{
+    width: 100%;
+}
+#start{
+    font-size: 22px;
+}
+#status{
+    font-size: 22px;
+}
+h4{
+    background-color: whitesmoke;
+    line-height: 2;
+    margin: 0px;
+}
+.instruccion_image{
+    display: inline-block;
+    width:45%
 }
