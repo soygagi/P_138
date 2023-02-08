@@ -55,7 +55,10 @@ var gameConfig={
 noseX = "";
 noseY = "";
 GameStatus = "";
-
+function STAR_GAME(){
+  GameStatus = "start";
+  document.getElementById("status").innerHTML = "El juego esta cargado";
+}
 function game(){
 
   console.log("noseX = " + noseX +" ,noseY =  "+ noseY);
