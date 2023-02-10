@@ -75,7 +75,7 @@ function game(){
     fill(255, 255, 255);
     textSize(40);
     textAlign(CENTER);
-    text("Presiona cualquier flecha del teclado para iniciar el juego", gameConfig.screenX/2, gameConfig.screenY/2);
+    text("Haz clic en jugar para iniciar el juego", gameConfig.screenX/2, gameConfig.screenY/2);
     textSize(40);
 
     stroke(255);
@@ -296,12 +296,14 @@ function manualControl(character){
       character.velocity.x-=gameConfig.moveSpeed;
       character.changeAnimation('move');
       character.mirrorX(-1);
+      console.log("izquierda");
     }
 
     if(noseX > 300){
         character.velocity.x+=gameConfig.moveSpeed;
       character.changeAnimation('move');
       character.mirrorX(1);
+      console.log("derecha");
     }
 
     if(!keyDown(control.left)&&!keyDown(control.right)&&!keyDown(control.up)){ 
@@ -313,7 +315,7 @@ function manualControl(character){
 
 /* Movimientos del personaje */
 function jumping(character){
-	if( (noseY < 168  &&character.live) || (touchIsDown&&character.live) ){
+	if( (noseY < 200  &&character.live) || (touchIsDown&&character.live) ){
     character.velocity.y+=gameConfig.jump;
     mario_jump.play();
 	}
